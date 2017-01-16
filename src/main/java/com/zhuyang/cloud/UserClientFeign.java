@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.zhuyang.cloud.entity.User;
 
-@FeignClient(value = "microservice-provider")
+@FeignClient(value = "microservice-provider") //application name of service provider
 public interface UserClientFeign {
-	// request "/service/all" in provider controller
+	// send "/service/all" to provider when findAll() involk
 	@RequestMapping(value = "/provider/service/all", method = RequestMethod.GET)
 	public List<User> findAll();
 

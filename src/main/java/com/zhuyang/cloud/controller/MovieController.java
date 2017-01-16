@@ -14,9 +14,9 @@ import com.zhuyang.cloud.entity.User;
 @RestController
 public class MovieController {
 	@Autowired
-	UserClientFeign userClientFeign;
+	UserClientFeign userClientFeign;//annotation of Feign 
 
-	@RequestMapping(value = "/user/all", method = RequestMethod.GET)
+	@RequestMapping(value = "/user/all", method = RequestMethod.GET) //handle request
 	public List<User> findAll() {
 		return userClientFeign.findAll();
 	}
